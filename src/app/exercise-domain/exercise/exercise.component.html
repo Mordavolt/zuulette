@@ -1,0 +1,7 @@
+<mat-card class="exercise-card">
+  <mat-card-title>{{exercise.name}}</mat-card-title>
+  <mat-card-content>
+    <div [innerHTML]="exercise.description"></div>
+  </mat-card-content>
+  <img mat-card-image src="{{exercise.image}}" alt="{{exercise.name}}">
+</mat-card>

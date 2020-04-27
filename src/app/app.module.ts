@@ -10,7 +10,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSliderModule } from '@angular/material/slider';
-import { TrainingMainComponent } from './training-main/training-main.component';
+import { TrainingComponent } from './training-main/training.component';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -22,7 +22,7 @@ import { RoundComponent } from './round-domain/round/round.component';
   declarations: [
     AppComponent,
     ExerciseComponent,
-    TrainingMainComponent,
+    TrainingComponent,
     RoundComponent
   ],
   imports: [

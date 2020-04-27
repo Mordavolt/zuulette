@@ -1,0 +1,24 @@
+<mat-expansion-panel expanded="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Setup
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <mat-label>Rounds</mat-label>
+  <mat-slider min="1" max="5" step="1" [(ngModel)]="count" thumbLabel="true" tickInterval="1"
+              (input)="updateRoundCount($event)"></mat-slider>
+  <mat-label>Min in round</mat-label>
+  <mat-slider min="2" [max]="max-1" step="1" [(ngModel)]="min" thumbLabel="true"
+              tickInterval="1" (input)="updateRoundMin($event)"></mat-slider>
+  <mat-label>Max in round</mat-label>
+  <mat-slider [min]="min+1" max="10" step="1" [(ngModel)]="max" thumbLabel="true"
+              tickInterval="1" (input)="updateRoundMax($event)"></mat-slider>
+  <button mat-raised-button color="primary" (click)="shuffleRounds()">Shuffle</button>
+</mat-expansion-panel>
+
+<div fxLayout="column"
+     fxLayoutGap="20px"
+     fxLayoutAlign="start center"
+     class="round-list">
+  <app-round [round]="round" *ngFor="let round of rounds"></app-round>
+</div>
